@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    environment {
+        NODE_PATH = '/usr/local/bin'
+        NPM_PATH = '/usr/local/bin'
+    }
+
     stages {
         stage('Clone Repository') {
             steps {
